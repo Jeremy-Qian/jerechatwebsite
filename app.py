@@ -28,6 +28,8 @@ try:
                 st.error("Password Error. Please try again.")
     if 'logged_in' not in st.session_state :
         login()
+except:
+    pass
 if st.session_state['logged_in']:
     # 构建 corpus.txt 的完整路径
     script_dir = os.path.dirname(os.path.abspath(__file__))
